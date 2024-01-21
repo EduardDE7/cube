@@ -7,7 +7,6 @@ const App = () => {
   const [rotateXCube, setRotateXCube] = useState(0);
   const [rotateYCube, setRotateYCube] = useState(0);
   const [activeFace, setActiveFace] = useState(0);
-  const requestRef = useRef();
 
   const handleWheel = (e) => {
     setActiveFace((prevActiveFace) =>
@@ -23,10 +22,10 @@ const App = () => {
   }, [activeFace]);
 
   console.log('render');
-  const debouncedScroll = useCallback(debounce(handleWheel, 100), []);
+  const debouncedScroll = useCallback(debounce(handleWheel, 50), []);
 
   return (
-    <main onWheel={debouncedScroll} style={{}}>
+    <main className="main" onWheel={debouncedScroll}>
       <Cube rotateXCube={rotateXCube} rotateYCube={rotateYCube} />
       <div className="buttons">
         {faces &&

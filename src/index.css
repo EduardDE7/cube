@@ -1,15 +1,18 @@
 :root {
-  --cubeSize: 300px;
-  --translateZ: 150px;
+  --cubeSize: 500px;
+  --translateZ: 250px;
 }
 
 body {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
   overflow: hidden;
 }
 
+.main {
+  display: grid;
+  place-content: center;
+  min-width: 100svh;
+  min-height: 100svh;
+}
 .container {
   margin-bottom: 100px;
   perspective: 1000px;
@@ -23,7 +26,7 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateX(-15deg) rotateY(15deg);
-  transition: all 2.85s cubic-bezier(1, 0.75, 0.5, 1.2);
+  transition: all 1.85s cubic-bezier(1, 0.75, 0.5, 1.2);
 }
 .face {
   position: absolute;
