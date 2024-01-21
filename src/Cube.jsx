@@ -1,9 +1,6 @@
 import React from 'react';
-import { useScrollRotate } from './useScrollRotate';
 
 export const Cube = React.memo(({ rotateXCube, rotateYCube }) => {
-  // const { rotateXCube, rotateYCube } = useScrollRotate();
-
   return (
     <div className="container">
       <div
