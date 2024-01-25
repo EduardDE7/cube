@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cubeSize: 500px;
+  --translateZ: 250px;
+}
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  overflow: hidden;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.front {
+  transform: translateZ(var(--translateZ));
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(var(--translateZ));
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(var(--translateZ));
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(var(--translateZ));
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(var(--translateZ));
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(var(--translateZ));
+}
